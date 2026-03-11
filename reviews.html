@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الآراء والتعليقات - لوفينغ هومز</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function submitReview() {
+            const name = document.getElementById('reviewName').value;
+            const comment = document.getElementById('reviewComment').value;
+            if(name && comment){
+                const container = document.getElementById('reviewsContainer');
+                const div = document.createElement('div');
+                div.style.border = "1px solid #333";
+                div.style.padding = "10px";
+                div.style.margin = "10px 0";
+                div.style.borderRadius = "5px";
+                div.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+                container.appendChild(div);
+                alert("تم إرسال تعليقك بنجاح!");
+                document.getElementById('reviewForm').reset();
+            } else {
+                alert("يرجى ملء جميع الحقول!");
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>لوفينغ هومز - الآراء والتعليقات</h1>
+    <nav>
+        <button onclick="location.href='index.html'">الرئيسية</button>
+        <button onclick="location.href='about.html'">من نحن</button>
+        <button onclick="location.href='packages.html'">الحزم</button>
+        <button onclick="location.href='facilities.html'">المرافق</button>
+        <button onclick="location.href='faq.html'">الأسئلة الشائعة</button>
+        <button onclick="location.href='contact.html'">اتصل بنا</button>
+        <button onclick="location.href='gallery.html'">المعرض</button>
+        <button onclick="location.href='reviews.html'">الآراء والتعليقات</button>
+    </nav>
+</header>
+
+<main>
+    <h2>شاركنا رأيك</h2>
+    <form id="reviewForm" onsubmit="event.preventDefault(); submitReview();">
+        <input type="text" id="reviewName" placeholder="اسمك" required>
+        <textarea id="reviewComment" placeholder="تعليقك" required></textarea>
+        <button type="submit">أرسل تعليقك</button>
+    </form>
+
+    <h3>التعليقات السابقة:</h3>
+    <div id="reviewsContainer"></div>
+</main>
+
+<footer>
+    <p>© 2026 لوفينغ هومز - كل الحقوق محفوظة</p>
+</footer>
+</body>
+</html>

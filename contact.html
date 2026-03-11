@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - لوفينغ هومز</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>لوفينغ هومز - اتصل بنا</h1>
+        <nav>
+            <button onclick="location.href='index.html'">الرئيسية</button>
+            <button onclick="location.href='about.html'">من نحن</button>
+            <button onclick="location.href='packages.html'">الحزم</button>
+            <button onclick="location.href='facilities.html'">المرافق</button>
+            <button onclick="location.href='faq.html'">الأسئلة الشائعة</button>
+            <button onclick="location.href='contact.html'">اتصل بنا</button>
+            <button onclick="location.href='gallery.html'">المعرض</button>
+            <button onclick="location.href='reviews.html'">الآراء والتعليقات</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>احجز الآن</h2>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="اسمك" required>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+            <select id="package" required>
+                <option value="">اختر الحزمة</option>
+                <option value="premium">المميزة</option>
+                <option value="classic">الكلاسيكية</option>
+                <option value="daily">اليوم</option>
+            </select>
+            <textarea id="message" placeholder="رسالة إضافية"></textarea>
+            <button type="submit">أرسل الحجز</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 لوفينغ هومز - كل الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>

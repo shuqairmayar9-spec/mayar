@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعرض - لوفينغ هومز</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 300px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function showImage(src) {
+            const popup = window.open("", "popup", "width=600,height=400");
+            popup.document.write(`<img src="${src}" style="width:100%">`);
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>لوفينغ هومز - المعرض</h1>
+    <nav>
+        <button onclick="location.href='index.html'">الرئيسية</button>
+        <button onclick="location.href='about.html'">من نحن</button>
+        <button onclick="location.href='packages.html'">الحزم</button>
+        <button onclick="location.href='facilities.html'">المرافق</button>
+        <button onclick="location.href='faq.html'">الأسئلة الشائعة</button>
+        <button onclick="location.href='contact.html'">اتصل بنا</button>
+        <button onclick="location.href='gallery.html'">المعرض</button>
+        <button onclick="location.href='reviews.html'">الآراء والتعليقات</button>
+    </nav>
+</header>
+
+<main>
+    <h2>صور فندق الكلاب</h2>
+    <div class="gallery">
+        <img src="../pictures/dog1.webp" alt="كلب 1">
+        <img src="../pictures/dog2.webp" alt="كلب 2">
+        <img src="../pictures/dog3.webp" alt="كلب 3">
+        <img src="../pictures/dog4.webp" alt="كلب 4">
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 لوفينغ هومز - كل الحقوق محفوظة</p>
+</footer>
+</body>
+</html>
